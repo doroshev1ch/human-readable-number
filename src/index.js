@@ -11,5 +11,6 @@ module.exports = function toReadable (number) {
         case 8: return 'eight';
         case 9: return 'nine';
         case 10: return 'ten';
+        default: return arguments.callee.name + ': Invalid number';
       }
 }
