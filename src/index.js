@@ -1,5 +1,6 @@
 module.exports = function toReadable (number) {
-    switch (number){
+    if (number <= 10){
+        switch (number){
         case 0: return 'zero';
         case 1: return 'one';
         case 2: return 'two';
@@ -11,6 +12,20 @@ module.exports = function toReadable (number) {
         case 8: return 'eight';
         case 9: return 'nine';
         case 10: return 'ten';
-        default: return arguments.callee.name + ': Invalid number';
       }
+    }
+    if (number <= 20 && number > 10){
+        switch (number){
+            case 11: return 'eleven';
+            case 12: return 'twelve';
+            case 13: return 'thriteen';
+            case 14: return 'fourteen';
+            case 15: return 'fifteen';
+            case 16: return 'sixteen';
+            case 17: return 'seventeen';
+            case 18: return 'eighteen';
+            case 19: return 'nineteen';
+            case 20: return 'twenty';
+          }
+    } 
 }
